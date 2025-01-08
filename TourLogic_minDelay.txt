@@ -1,0 +1,49 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -max_paths 1
+Design : TourLogic
+Version: V-2023.12-SP5
+Date   : Mon Dec  9 20:32:50 2024
+****************************************
+
+Operating Conditions: tt0p85v25c   Library: saed32lvt_tt0p85v25c
+Wire Load Model Mode: enclosed
+
+  Startpoint: board_reg[0][0][2]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: board_reg[0][0][2]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  TourLogic          16000                 saed32lvt_tt0p85v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  board_reg[0][0][2]/CLK (DFFARX1_LVT)                    0.00       0.00 r
+  board_reg[0][0][2]/Q (DFFARX1_LVT)                      0.09       0.09 f
+  U3289/Y (AO22X1_LVT)                                    0.05       0.13 f
+  board_reg[0][0][2]/D (DFFARX1_LVT)                      0.01       0.14 f
+  data arrival time                                                  0.14
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.15       0.15
+  board_reg[0][0][2]/CLK (DFFARX1_LVT)                    0.00       0.15 r
+  library hold time                                      -0.01       0.14
+  data required time                                                 0.14
+  --------------------------------------------------------------------------
+  data required time                                                 0.14
+  data arrival time                                                 -0.14
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+1
